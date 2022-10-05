@@ -54,7 +54,7 @@ const StartGameScreen = (props) => {
 
     return (
     <View style={styles.inputContainer}>
-      <View style={styles.numberInputContainer}>
+      {/* <View style={styles.numberInputContainer}>
         <TextInput
           style={styles.numberInput}
           maxLength={2}
@@ -63,7 +63,7 @@ const StartGameScreen = (props) => {
           value={enteredNumber}>
           </TextInput>
           
-      </View>
+      </View> */}
       <View style={styles.buttonContainer}>
         <View style={styles.button}>
           <PrimaryButton onPress={resetNumberHandler} >Reset</PrimaryButton>
