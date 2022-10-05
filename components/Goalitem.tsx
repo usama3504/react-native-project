@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import { Button, FlatList, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import GoalInput from './GoalInput';
+import { GoalItemProps } from '../App';
 
-const GoalItem=(props)=>{
+const GoalItem=(props:GoalItemProps)=>{
 
     // const [modalIsVisible,setModalIsVisibal]=useState(false);
 
