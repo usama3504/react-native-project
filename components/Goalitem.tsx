@@ -1,7 +1,14 @@
 import { useState } from 'react';
-import { Button, FlatList, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Button, FlatList, ListRenderItemInfo, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
 import GoalInput from './GoalInput';
-import { GoalItemProps } from '../App';
+import { goalListInterface } from '../projects/goalProject';
+
+interface GoalItemProps{
+    data:ListRenderItemInfo<goalListInterface>
+    deleteGoal:(goalKey:string)=>void;
+    onUpdateGoal:(goalKey:string)=>void;
+  
+  }
 
 const GoalItem=(props:GoalItemProps)=>{
 

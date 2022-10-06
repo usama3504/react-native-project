@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { GoalInputProps } from '../App';
+// import { GoalInputProps } from '../projects/goalProject';
 import {
   Button,
   FlatList,
@@ -12,6 +12,14 @@ import {
   View,
   Image,
 } from 'react-native';
+interface GoalInputProps{
+  modalVisibility:boolean;
+  cancelModal:(modalVisibility:boolean)=>void;
+  userGoalInputData:(userGoal:string)=>void;
+  updateGoal:boolean;
+  upDateGoalText?:string;
+  onUpdatGoalRequest:()=>void;
+} 
 // interface goalInputProps{
 //     modalVisibility : Boolean;
 //     cancelModal :(modalVisibility:boolean)=>void;
@@ -83,7 +91,7 @@ const GoalInput = (props:GoalInputProps) => {
               <Button
                 color="#b180f0"
                 title="Update Goal"
-                // onPress={goalListHandler}
+                onPress={goalListHandler}
               />
             </View>
           )}
