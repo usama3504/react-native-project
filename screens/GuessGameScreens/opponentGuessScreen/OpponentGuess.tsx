@@ -19,13 +19,11 @@ interface opponentGuessProps {
 }
 
 const OpponentGuess = (props: opponentGuessProps) => {
+  const [guessAttemptsNumber, setguessAttemptsNumber] = useState<number>(1);
 
-const [guessAttemptsNumber,setguessAttemptsNumber]=useState<number>(1);
-
-
-const setguessAttemptsNumberHandler=()=>{
-    setguessAttemptsNumber((priviousValue)=>priviousValue+1)
-}
+  const setguessAttemptsNumberHandler = () => {
+    setguessAttemptsNumber(priviousValue => priviousValue + 1);
+  };
 
   const guessRandomNumber = (max: number, min: number) => {
     return Math.floor(Math.random() * (max - min + 1) + min);
@@ -49,7 +47,7 @@ const setguessAttemptsNumberHandler=()=>{
     if (botGuessedNumber == props.userEnteredNumber) {
       // console.log(props.userEnteredNumber);
       // console.log(botGuessedNumber);
-      
+
       setGameOverModalVisibility(true);
       setGuessValueList([]);
       setTemp(true);
@@ -66,7 +64,7 @@ const setguessAttemptsNumberHandler=()=>{
         setMinGuessedValue(botGuessedNumber);
         setBotGuessedNumber(randomNum);
         setGuessValueList(privousList => [...privousList, randomNum]);
-        setguessAttemptsNumberHandler()
+        setguessAttemptsNumberHandler();
       } else {
         Alert.alert("Don't Lie!", 'You know this is wrong...');
       }
@@ -79,7 +77,7 @@ const setguessAttemptsNumberHandler=()=>{
         setMaxGuessedValue(botGuessedNumber);
         setBotGuessedNumber(randomNum);
         setGuessValueList(privousList => [...privousList, randomNum]);
-        setguessAttemptsNumberHandler()
+        setguessAttemptsNumberHandler();
       } else {
         Alert.alert("Don't Lie!", 'You know this is wrong...');
       }
@@ -129,8 +127,7 @@ const setguessAttemptsNumberHandler=()=>{
             renderItem={guessNumber => {
               return (
                 <OpponentGuessItem
-                  guessValue={guessNumber.item}
-                  ></OpponentGuessItem>
+                  guessValue={guessNumber.item}></OpponentGuessItem>
                 // <Text>{guessNumber.item}</Text>
               );
             }}></FlatList>

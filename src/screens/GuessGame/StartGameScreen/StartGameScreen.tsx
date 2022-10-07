@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import {View, StyleSheet,TextInput, Alert} from 'react-native';
+import {View, StyleSheet,TextInput, Alert,Text} from 'react-native';
 
 // import {TextInput} from 'react-native-gesture-handler';
 import PrimaryButton from '../../../../components/GuessGameComponents/PrimaryButton';
@@ -60,6 +60,9 @@ const StartGameScreen = (props:StartGameScreenProps) => {
 
     return (
     <View style={styles.inputContainer}>
+      <View style={styles.guessNumberHeadingContainer}>
+          <Text style={styles.guessNumberHeading}>Enter a Number</Text>
+        </View>
       <View style={styles.numberInputContainer}>
         <TextInput
           style={styles.numberInput}
@@ -85,7 +88,7 @@ const StartGameScreen = (props:StartGameScreenProps) => {
 
 const styles = StyleSheet.create({
   inputContainer: {
-    marginTop: 100,
+    marginTop: 80,
     padding: 16,
     backgroundColor: '#4e0329',
     marginHorizontal: 24,
@@ -116,7 +119,15 @@ const styles = StyleSheet.create({
   },
   button:{
     flex:1,
-  }
+  },
+  guessNumberHeadingContainer:{
+    padding:5,
+        alignItems: "center", 
+  },
+  guessNumberHeading:{
+    fontSize:25,
+    color:"white",
+  },
 });
 
 export default StartGameScreen;

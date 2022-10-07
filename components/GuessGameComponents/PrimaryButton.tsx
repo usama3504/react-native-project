@@ -27,15 +27,7 @@ const PrimaryButton = (props:PrimaryButton) => {
   );
 };
 const style = StyleSheet.create({
-  buttonContainer: {
-    
-    margin: 4,
-    borderRadius: 28,
-    paddingVertical: 8,
-    paddingHorizontal: 16,
-    backgroundColor: '#72063c',
-    alignItems: 'center',
-  },
+  
   buttonText: {
     color: 'white',
   },
@@ -43,11 +35,13 @@ const style = StyleSheet.create({
     opacity:0.75
   },
   button: {
+    margin: 4,
     backgroundColor: '#72063C',
     marginHorizontal: 4,
     paddingVertical: 8,
     elevation: 2,
-    borderRadius: 35,
+    borderRadius: 28,
+    alignItems: 'center',
 }
 });
 export default PrimaryButton;

@@ -93,7 +93,7 @@ const styles=StyleSheet.create({
         alignItems: "center", 
     },
     guessNumberHeading:{
-        fontSize:20,
+        
     },
     guessNumberText:{
         alignItems: "center", 
